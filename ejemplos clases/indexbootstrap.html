@@ -10,11 +10,21 @@
 
     </head>
     <body>
-        <div class="container bg-primary" > <!--class se extrae de link css, extrae una forma-->
+        <div class="container bg-primary" > <!--class se extrae de link css, extrae una forma--> 
             <h1>Esto es un container</h1>
-        </div>
+        </div><!--la diferencia entre estos dos container/formas es que el primero ocupa el espacio diseñedao de un hedear mientras el segundo ocupa el 100% del width-->
         <div class="container-fluid bg-secondary"> 
             <h1>Esto es un container-fluid</h1>
+        </div>
+        <div class="container-fluid bg-secondary">
+            <div class="row"><!--clase fila-->
+                <dic class="col-12 bg-primary" style="font-size:4vw;">hola</dic><!--ocupa todo el ancho-->
+            </div>
+            <div class="row">
+                <div class="col-4 bg-warning" style="font-size:2vw;">A</div>
+                <div class="col-4 bg-success" style="font-size:2vw;">B</div>
+                <div class="col-4 bg-danger" style="font-size:2vw;">C</div>
+            </div>
         </div>
     </body>
 </html>
