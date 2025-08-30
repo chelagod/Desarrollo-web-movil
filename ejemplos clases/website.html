@@ -33,7 +33,7 @@
                 <a class="nav-link" href="#">Servicios</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#m1">Contacto</a>
                 </li>  
             </ul>
             </div>
@@ -55,10 +55,10 @@
             <img src="img/Love.jpg" alt="shrek" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img src="https://68.media.tumblr.com/352ce6a2b890457118d68940abf6edf6/tumblr_o6cdqv1bo21qj9m9co3_1280.jpg" alt="foto tumblr" class="d-block w-100">
+            <img src="img/Saturno.jpg" alt="foto tumblr" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img src="https://i.pinimg.com/1200x/60/b1/81/60b1817f776c9500c551626adc8f6c47.jpg" alt="In utero" class="d-block w-100">
+            <img src="img/In_utero.jpg" alt="In utero" class="d-block w-100">
             </div>
         </div>
 
@@ -70,7 +70,45 @@
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>    
-    <!--Footer-->
+    <!--Footer--> <!--Ejemplo-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg bg-primary text-light d-flex justify-content-center" style="font-size:2vw;">ejemplodeejemplo@gmail.com Cel: +569123456</div>
+        </div>
+    </div>
     <!--Modal-->
+    <div class="modal fade" id="m1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="Mensaje">Mensaje:</label>
+                            <textarea class="form-control" id="Mensaje" rows="5"></textarea>
+                        </div>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                    </form> 
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     </body>
 </html>
