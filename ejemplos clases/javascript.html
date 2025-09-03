@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <script>
+            function saludar(){
+                console.log("hola");
+            }
+            function cambiotexto(e){
+                if (e.key === "Enter"){
+                    e.preventDefault();
+                    console.log("Hola " + document.getElementById("texto").value);
+                }
+            }
+            function validar(){
+                let valor = document.getElementById("texto2").value;
+                if (valor ===""){
+                    console.log("texto vacio");
+                    document.getElementById("valtexto2").style.display= "";
+                } else{
+                    document.getElementById("valtexto2").style.display= "none";
+                }
+            }
+            let x, y, z;
+            x = 5;
+            y = 2;
+            z = x + y;
+            z += 2; //z = z + 2;
+            z *= 2; //z = Z * 2;
+            z = x ** y; // = base(x) exponente(y)
+            console.log(z);
+            // estructuras control Python and: Javascript && - python or : Javascript ||
+            if(z < 10 && y === 2){ // y == 2 -> "2" == 2 V -> "2" === 2 F (doble igual menos estricto triple igual mas estricto)
+                concole.log("z unitario");
+            } else if(z < 20){
+                console.log("z decimal")
+            } else {
+                console.log("otro Caso")
+            }
+            //control de excepciones
+            try{
+                console.log("Contol");
+                throw "muy lento";
+            }catch (err) {
+                console.log(err);
+            }
+            // librerias
+            let text;
+            if (Math.random() < 0.5){
+                console.log("cara");
+            }else {
+                console.log("sello")
+            }
+            console.log(typeof(z));
+            //iterraciones
+            for (let i=0; i < 3; i++){ // for i in range(3) : print(i)
+                console.log(i);
+            }
+            let j = 0;
+            while (j < 3){
+                console.log(j);
+                j++;
+            }
+            let k = 0;
+            do {
+                console.log(k);
+                k++
+            } while(k < 3);
+            const marcas = ["BMW", "Volvo", "Ford"];
+            let l=0;
+            let todoMarcas = "";
+            for(;marcas[l];){
+                todoMarcas += " " + marcas[l];
+                l++;
+            }
+            console.log(todoMarcas);
+        </script>
+    </head>
+    <body>
+        <p id="msg"></p>
+        <select name="Comuna" id="com"></select>
+        <!--(el script esta en javascript)console.log esscribe un mensaje dentro de la terminal de la pagina, document.getElementById("msg").innerText esta escribe el mensaje en la misma pagina web -->
+        <script>
+            console.log("Empezo el codigo"); 
+            document.getElementById("msg").innerText = "Hola";
+            document.getElementById("com").innerHTML = '<option value="1">Santiago</option><option value="2">Talca</option>'
+        </script>
+        <button type="button" onclick="alert('Clic');">Evento</button><!--este porcion proporciona un evento ocasionado por el mouse en este caso hacer clic en evento manda una notificacion al ususario-->
+        <button type="button" onclick="console.log('Clic');">Evento2</button> <!--lo mismo que el anterior pero en este caso el mensaje es dentro de la consola/terminal-->
+        <button type="button" onclick="window.print();">imprimir</button>
+        <button type="button" onclick="saludar();">Saludo</button> <!-- el button se puedee utilizar para que funcione una funcion ejemplo para ver si un API funciona-->
+        <input type="text" id="texto" onkeydown="cambiotexto(event);"/> <!--sirve para ingresar informacion en este caso la funcion tiene el objetivo de poner el mensaje en la terminal-->
+        <input type="text" id="texto2" onblur="validar();"/> <span id="valtexto2" style="display:none; color: red">debe ingresar texto</span><!-- esto sirve para recordar/obligar a rellenar el campo con algun dato en este caso si el campo no se rellena manda un mensaje al la terminal-->
+    </body>
+</html>
